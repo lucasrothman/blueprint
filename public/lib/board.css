@@ -1,0 +1,11 @@
+.piece {
+  border: 1px solid black;
+  height: 100%;
+  width: 100%;
+}
+.hover {
+  -webkit-box-shadow: inset 0 0 3px 3px rgb(177, 81, 81);
+  -moz-box-shadow: inset 0 0 3px 3px rgb(177, 81, 81);
+  box-shadow: inset 0 0 3px 3px rgb(177, 81, 81);
+}
+

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Battle Ship</title>
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="./lib/board.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+  </head>
+  <body>
+    <!-- <div class="container">
+      <div class="grid grid-user1">
+        <div></div>
+        <div></div>
+      </div>
+      <div class="grid grid-user2"></div>
+    </div>
+    
+    <div class="grid-display">
+      <div class="ship destroyer-container" draggable="true">
+        <div id="destroyer-0"></div>
+        <div id="destroyer-1"></div>
+      </div>
+      <div class="ship submarine-container" draggable="true">
+        <div id="submarine-0"></div>
+        <div id="submarine-1"></div>
+        <div id="submarine-2"></div>
+      </div>
+      <div class="ship cruiser-container" draggable="true">
+        <div id="cruiser-0"></div>
+        <div id="cruiser-1"></div>
+        <div id="cruiser-2"></div>
+      </div>
+      <div class="ship battleship-container" draggable="true">
+        <div id="battleship-0"></div>
+        <div id="battleship-1"></div>
+        <div id="battleship-2"></div>
+        <div id="battleship-3"></div>
+      </div>
+      <div class="ship carrier-container" draggable="true">
+        <div id="carrier-0"></div>
+        <div id="carrier-1"></div>
+        <div id="carrier-2"></div>
+        <div id="carrier-3"></div>
+        <div id="carrier-4"></div>
+      </div>
+    </div>
+      
+    <div class="hidden-info">
+      <button id="start"></button>Start Game</button>
+      <button id="rotate">Rotate Your Ships</button>
+      <h3 id="whose-go">Your Go</h3>
+      <h3 id="info"></h3>
+    </div> -->
+
+    <div class="setup">
+      <div class="form">
+        <input
+          autocomplete="off"
+          class="textsetup"
+          type="text"
+          id="gamename"
+          name="gamename"
+          placeholder="Game Name"
+        /><br />
+        <input
+          placeholder="Password"
+          class="textsetup"
+          type="text"
+          id="password"
+          name="password"
+        />
+      </div>
+      <br />
+      <input
+        class="startbtns"
+        autocomplete="off"
+        type="button"
+        id="create"
+        value="Create Game"
+        onclick="createGame()"
+      />
+      <input
+        class="startbtns"
+        type="button"
+        value="Join Game"
+        onclick="joinGame()"
+        id="join"
+      />
+      <p id="indicator"></p>
+      <input
+        class="startbtns"
+        type="button"
+        value="Cancel"
+        id="cancel"
+        onclick="cancel()"
+      />
+    </div>
+    <div class="row">
+      <div id="gameBoard"></div>
+    </div>
+    <div class="gameStatus">
+      <p class="player"></p>
+      <span id="sep"> || </span>
+      <p class="currentTurn"></p>
+      <div class="rematch-req-div">
+        <input
+          class="rematch-btn"
+          type="button"
+          value="Rematch"
+          onclick="reqRematch()"
+        />
+      </div>
+    </div>
+    <img src="./assets/largeship" alt="" />
+    <img src="./assets/mediumship" alt="" />
+    <img src="./assets/smallship" alt="" />
+    <img src="./assets/bomb" alt="" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="./lib/board.js"></script>
+    <script src="./index.js"></script>
+  </body>
+</html>
